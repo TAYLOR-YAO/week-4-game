@@ -1,0 +1,85 @@
+html{
+  
+    width: 650px;
+    margin: 0px auto !important;
+    
+ }
+ .container{
+    background-image: url(../images/back-image.JPG);
+    margin: 0px auto !important;
+    padding: 10px;
+    border: 10px dotted  gray;
+    border-radius: 30px;
+ }
+ 
+ #title{
+     background-color: rgb(226, 128, 128);
+     color: white;
+     width: 270px;
+     height: 50px;
+     margin: 0px auto;
+     text-align: center;
+     border:  3px double black;
+     border-radius: 10px;
+ }
+ #numberHolder{
+     margin-top: 5px;
+     margin-left: 35px;
+     background-color: green;
+     height: 80px;
+     border-radius: 10px;
+ }
+ #number{
+     text-align: center;
+ }
+ #scoreBar{
+     background-color: skyblue;
+     height: 80px;
+     margin-left: 85px;
+     margin-top: 5px;
+     border-radius: 10px;
+ }
+ #rules{
+    margin: 0px auto;
+     margin-top: 5px !important;
+     width: 560px;
+     background-color: grey;
+     border-radius: 10px;
+ 
+ }
+ P{
+     color: black;
+     padding: 10px;
+     line-height: 20px;
+ }
+ #cristals{
+     margin-top: 5px;
+     margin-bottom: 5px;
+ }
+ .cristals{
+     height: 70px !important ;
+     margin: 0px auto !important ;
+     border-radius: 10px;
+    
+ }
+ #totalboard{
+     background-color: teal;
+     height: 90px;
+     margin: 0px auto;
+     margin-top: 10px;
+     border-radius: 10px;
+ }
+ h3{
+     text-align: center;
+ }
+ h5{
+     text-align: center;
+ }
+ .winTitle{
+     float: left;
+     margin-right: 30px;
+ }
+ .loseTitle{
+     float: left;
+     margin-right: 30px;
+ }
