@@ -35,7 +35,7 @@ html{
  #scoreBar{
      background-color: skyblue;
      height: 80px;
-     margin-left: 85px;
+     margin-left: 20px;
      margin-top: 5px;
      border-radius: 10px;
  }
@@ -69,17 +69,30 @@ html{
      margin-top: 10px;
      border-radius: 10px;
  }
+ #commentholder{
+    background-color: white;
+    height: 80px;
+    margin-top: 5px;
+    margin-left: 15px;
+    border-radius: 10px;
+ }
+ #comments{
+     color: red;
+ }
  h3{
      text-align: center;
  }
  h5{
      text-align: center;
  }
+ h4{
+     text-align: center;
+ }
  .winTitle{
      float: left;
-     margin-right: 30px;
+     margin-right: 10px;
  }
  .loseTitle{
      float: left;
-     margin-right: 30px;
+     margin-right: 10px;
  }

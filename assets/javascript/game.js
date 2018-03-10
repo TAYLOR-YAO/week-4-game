@@ -8,14 +8,18 @@ var redCristal;
 var blueCristal;
 var yellowCristal;
 var greenCristal;
+// var winComent;
+// var loseComents;
 
   $(document).ready(function(){
+// The Randum Number Fuction
     function rand (){
     numbarToReach=Math.floor(Math.random( ) * 120) + 19;
     guessedNumber = numbarToReach;
     console.log("guessed number:", guessedNumber);
   }
   rand();
+  // Red cristan....On click Function
   redCristal = Math.floor(Math.random()*12) +1;
   console.log("red crystal:", redCristal);
   $("body").on("click", "#red", function(){
@@ -31,7 +35,8 @@ var greenCristal;
       console.log("loses");
     }
   });
-//blue Cristal
+
+//blue Cristal....On click Function
   blueCristal = Math.floor(Math.random()*12) +1;
   console.log("blue crystal:", blueCristal);
   $("body").on("click", "#blue", function(){
@@ -46,7 +51,8 @@ var greenCristal;
       console.log("loses");
     }
   });
-//Yellow cristal
+
+//Yellow cristal....On click Function
   yellowCristal = Math.floor(Math.random()*12) +1;
   console.log("yellow crystal:", yellowCristal);
   $("body").on("click", "#yellow", function(){
@@ -61,8 +67,8 @@ var greenCristal;
       console.log("loses");
     }
   });
-//-----------------------------------------------------------------------
-// green Cristal
+
+// green Cristal..... On click Function
   greenCristal = Math.floor(Math.random()*12) +1;
   console.log("green crystal:", greenCristal);
   $("body").on("click", "#green", function(){
@@ -77,7 +83,8 @@ var greenCristal;
       console.log("loses");
     }
   });
-  //--------------------------------------------------------------------
+
+  // Win Condition
     function winCondition() {
       wins++;
       $("#wins").html(wins);
@@ -91,15 +98,30 @@ var greenCristal;
       console.log("green crystal:", greenCristal);
       total = 0;
       console.log("this is the total:" + total);
-      rand();
+// Comment board................................
+      if(wins === 12){
+        var winComent = "YOu Won!";
+        $("#comments").html(" " + winComent);
+        wins = 0;
+        loses = 0;
+    }else if(loses === 9){
+        var loseComent = "You Lost!";
+        winComent = "YOu Won!";
+        console.log("You Won!")
+        $("#comments").html(" " + loseComent);
+        console.log("game over!");
+        wins = 0;
+        loses = 0;
+    }
+
+//.........................    rand();
       $("#number").html(guessedNumber);
       $("#totals").html(total);
       $("#wins").html( "" + wins);
       $("#loses").html(" " + loses);
     }
-  //--------------------------------------------------------------------
-  //--------------------------------------------------------------------
 
+// Lose Conditin
   function loseCondition() {
     loses++;
     $("#lose").html(loses);
@@ -113,15 +135,33 @@ var greenCristal;
     console.log("green crystal:", greenCristal);
     total = 0;
     console.log("this is the total:" + total);
+//comment board ...........................................
+    if(wins === 12){
+        var winComent = "You Won!";
+        $("#comments").html(" " + winComent);
+        wins = 0;
+        loses = 0;
+    }else if(loses === 9){
+        var loseComent = "You Lost!";
+        winComent = "YOu Won!";
+        console.log("You Won!");
+
+        $("#comments").html(" " + loseComent);
+        console.log("game over!");
+        wins = 0;
+        loses = 0;
+    }
+//.............................................................
     rand();
+
+
     $("#number").html(guessedNumber);
     $("#totals").html(total);
     $("#wins").html( "" + wins);
     $("#loses").html(" " + loses);
   }
 
-  //--------------------------------------------------------------------
-
+ 
 
   $("#number").html(guessedNumber);
   $("#totals").html(total);
@@ -129,3 +169,8 @@ var greenCristal;
   $("#loses").html(" " + loses);
 
 });
+
+
+
+
+
