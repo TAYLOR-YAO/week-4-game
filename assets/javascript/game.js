@@ -143,7 +143,7 @@ var greenCristal;
         loses = 0;
     }else if(loses === 9){
         var loseComent = "You Lost!";
-        winComent = "YOu Won!";
+        winComent = "You Won!";
         console.log("You Won!");
 
         $("#comments").html(" " + loseComent);
