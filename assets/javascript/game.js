@@ -3,7 +3,7 @@ var total = 0 ;
 var guessedNumber = 0;
 var wins = 0;
 var loses = 0;
-var numbarToReach;
+var guessedNumber;
 var redCristal;
 var blueCristal;
 var yellowCristal;
@@ -14,8 +14,7 @@ var greenCristal;
   $(document).ready(function(){
 // The Randum Number Fuction
     function rand (){
-    numbarToReach=Math.floor(Math.random( ) * 120) + 19;
-    guessedNumber = numbarToReach;
+    guessedNumber=Math.floor(Math.random( ) * 120) + 19;
     console.log("guessed number:", guessedNumber);
   }
   rand();
@@ -30,7 +29,7 @@ var greenCristal;
       winCondition();
       console.log("wins");
     }else if(total > guessedNumber){
-        loseCondition()
+        loseCondition();
       $("#loses").html(loses);
       console.log("loses");
     }
@@ -47,7 +46,7 @@ var greenCristal;
       winCondition();
       console.log("wins");
     }else if(total > guessedNumber){
-        loseCondition()
+        loseCondition();
       console.log("loses");
     }
   });
@@ -63,7 +62,7 @@ var greenCristal;
       winCondition();
       console.log("wins");
     }else if(total > guessedNumber){
-        loseCondition()
+        loseCondition();
       console.log("loses");
     }
   });
@@ -79,7 +78,7 @@ var greenCristal;
       winCondition();
       console.log("wins");
     }else if(total > guessedNumber){
-        loseCondition()
+        loseCondition();
       console.log("loses");
     }
   });
@@ -113,6 +112,7 @@ var greenCristal;
         wins = 0;
         loses = 0;
     }
+    rand();
 
 //.........................    rand();
       $("#number").html(guessedNumber);
